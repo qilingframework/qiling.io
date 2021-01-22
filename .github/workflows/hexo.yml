@@ -24,7 +24,10 @@ jobs:
         repository: qilingframework/theme.qiling.io
         path: themes/aircv
         submodule: recursive
-    
+   
+    - name: Install Dependencies
+      run: cd themes/aircv && yarn add hexo-renderer-scss hexo-filter-responsive-images imageinfo js-yaml && cd ../../
+
     - name: Deploy
       id: deploy
       uses: sma11black/hexo-action@v1.0.0
