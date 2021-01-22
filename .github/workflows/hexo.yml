@@ -1,0 +1,34 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2.1.0
+    
+    # Workaround
+    - name: Checkout private tools
+      uses: actions/checkout@v2
+      with:
+        repository: qilingframework/theme.qiling.io
+        path: themes/aircv
+        submodule: recursive
+    
+    - name: Deploy
+      id: deploy
+      uses: sma11black/hexo-action@v1.0.0
+
+    - name: Get the output
+      run: |
+        echo "${{ steps.deploy.outputs.notify }}"
