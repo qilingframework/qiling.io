@@ -29,7 +29,7 @@ jobs:
       run: cd themes/aircv && yarn add hexo-renderer-scss hexo-filter-responsive-images imageinfo js-yaml && cd ../../
     
     - name: Install Hexo
-      run: npm install hexo-cli -g && npm install hexo-deployer-git --save
+      run: npm install hexo-cli && npm install hexo-deployer-git --save
    
     - name: Setup git
       run: git config --global user.email mio@lazym.io && git config --global user.name lazymio
@@ -38,7 +38,7 @@ jobs:
       run: mkdir -p /root/.ssh/ && echo "$QILING_IO_DKEY" > /root/.ssh/id_rsa && chmod 600 /root/.ssh/id_rsa && ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts
 
     - name: Deploy
-      run: hexo g -d
+      run: npx hexo g -d
 
     - name: Get the output
       run: |
