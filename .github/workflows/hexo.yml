@@ -26,7 +26,7 @@ jobs:
         submodule: recursive
    
     - name: Install Dependencies
-      run: cd themes/aircv && yarn add hexo-renderer-scss hexo-filter-responsive-images imageinfo js-yaml && cd ../../
+      run: cd themes/aircv && yarn install && cd ../../
     
     - name: Install Hexo
       run: npm install hexo-cli && npm install hexo-deployer-git --save
