@@ -37,6 +37,8 @@ jobs:
 
     - name: Setup ssh
       run: mkdir -p ~/.ssh/ && echo "$QILING_IO_DKEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+      env:
+        QILING_IO_DKEY : ${{ secrets.QILING_IO_DKEY }}
 
     - name: Deploy
       run: npx hexo g -d
