@@ -28,6 +28,10 @@ jobs:
     - name: Deploy
       id: deploy
       uses: sma11black/hexo-action@v1.0.0
+      with:
+          user_name: lazymio
+          user_email: mio@lazym.io
+          deploy_key: ${{ secrets.QILING_IO_DKEY }}
 
     - name: Get the output
       run: |
