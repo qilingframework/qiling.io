@@ -26,11 +26,8 @@ jobs:
         path: themes/aircv
         submodule: recursive
    
-    - name: Install Hexo
-      run: npm install hexo-cli && npm install hexo-deployer-git --save
-   
     - name: Install Dependencies
-      run: npm install hexo-renderer-scss hexo-filter-responsive-images imageinfo js-yaml@3.13.1
+      run: npm install
     
     - name: Setup git
       run: git config --global user.email mio@lazym.io && git config --global user.name lazymio
