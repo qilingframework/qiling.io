@@ -15,7 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v2.1.0
+    - name: Checkout qiling.io
+      uses: actions/checkout@v2.1.0
     
     # Workaround
     - name: Checkout themes
