@@ -98,11 +98,11 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: aircv
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/qilingframework/qiling.io
+  repo: git@github.com:qilingframework/qiling.io.git
   branch: gh-page
