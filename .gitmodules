@@ -1,0 +1,3 @@
+[submodule "themes/aircv"]
+	path = themes/aircv
+	url = git@github.com:qilingframework/theme.qiling.io.git
