@@ -30,7 +30,7 @@ jobs:
       run: npm install hexo-cli && npm install hexo-deployer-git --save
    
     - name: Install Dependencies
-      run: cd themes/aircv && npm install hexo-renderer-scss hexo-filter-responsive-images imageinfo js-yaml@3.13.1 && cd ../../
+      run: npm install hexo-renderer-scss hexo-filter-responsive-images imageinfo js-yaml@3.13.1
     
     - name: Setup git
       run: git config --global user.email mio@lazym.io && git config --global user.name lazymio
