@@ -35,7 +35,7 @@ jobs:
       run: git config --global user.email mio@lazym.io && git config --global user.name lazymio
 
     - name: Setup ssh
-      run: mkdir -p /root/.ssh/ && echo "$QILING_IO_DKEY" > /root/.ssh/id_rsa && chmod 600 /root/.ssh/id_rsa && ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts
+      run: mkdir -p ~/.ssh/ && echo "$QILING_IO_DKEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
     - name: Deploy
       run: npx hexo g -d
