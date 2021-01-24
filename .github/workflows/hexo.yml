@@ -23,7 +23,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: qilingframework/theme.qiling.io
-        path: themes/Casper
+        path: themes/fluid
         submodule: recursive
    
     - name: Install Dependencies
