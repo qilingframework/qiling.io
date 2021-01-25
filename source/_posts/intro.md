@@ -3,7 +3,7 @@ title: Introduction
 sticky: 999
 ---
 
-Qiling Framework is corss platform and multi arch ultra lightweight emulator. Supported OS: Linux, MacOS, Windows, FreeBSD, DOS and UEFI. Support Arch: x86(16, 32 and 64bit), ARM, ARM64, MIPS, EVM and WASM.
+A corss platform and multi arch ultra lightweight emulator. Supported OS: Linux, MacOS, Windows, FreeBSD, DOS and UEFI. Support Arch: x86(16/32/64), ARM(64) MIPS, EVM and WASM.
 
 <!-- more -->
 
