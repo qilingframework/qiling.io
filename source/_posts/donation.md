@@ -26,8 +26,8 @@ Please note,
 - These are not ready made. So, you might need to wait a while for the swags to be delivered.
 - Paypal is accepted at our [web store](https://www.hardwareninja.store/c/QilingFramework)
 
-<img src="https://raw.githubusercontent.com/qilingframework/qilingframework.github.io/master/images/swag.jpg"><br />
-<img src="https://raw.githubusercontent.com/qilingframework/qilingframework.github.io/master/images/donation-girl.jpg">
+<img src="https://github.com/qilingframework/theme.qiling.io/blob/master/source/img/swag.jpg?raw=true"><br />
+<img src="https://github.com/qilingframework/theme.qiling.io/blob/master/source/img/donation-girl.jpg?raw=true">
 
 - Paypal: [https://www.hardwareninja.store/c/QilingFramework](https://www.hardwareninja.store/c/QilingFramework)
 - Crypto Currencies:
