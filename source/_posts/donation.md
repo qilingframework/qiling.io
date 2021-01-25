@@ -1,5 +1,6 @@
 ---
 title: Donation
+permalink: /donation/
 ---
 
 Opensource project is never an easy task. Hence, we value any help from the community. We would like to thank individual/organization that generously donated to Qiling Framework project. Listed below are not in any particular order:
@@ -16,6 +17,8 @@ Opensource project is never an easy task. Hence, we value any help from the comm
   - < 150USD: Name on donation page
   - => 150USD: Stickers + USB dirve + T-Shirt + Name on donation page
 ```  
+
+Please note,
 
 - Name on donation page is default, please let me know if you don't agree
 - "USD" denotes the US dolar equivalent amount of coin value during the time of donation  
