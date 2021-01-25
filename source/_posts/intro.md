@@ -3,7 +3,7 @@ title: Introduction
 sticky: 999
 ---
 
-A corss platform and multi arch ultra lightweight emulator. Supported OS: Linux, MacOS, Windows, FreeBSD, DOS and UEFI. Support Arch: x86(16/32/64), ARM(64) MIPS, EVM and WASM.
+Corss platform and multi arch ultra lightweight emulator. Supported OS: Linux, MacOS, Windows, FreeBSD, DOS and UEFI. Support Arch: x86(16/32/64), ARM(64) MIPS, EVM and WASM.
 
 <!-- more -->
 
