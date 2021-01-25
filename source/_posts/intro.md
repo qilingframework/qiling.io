@@ -2,7 +2,11 @@
 title: Introduction
 ---
 
-Qiling Framework is an ultra lightweight “sandbox” for Linux, MacOS, Windows, FreeBSD, DOS, UEFI and MBR. It supports x86 (16, 32 and 64bit), ARM, ARM64 and MIPS. It also support Linux Kernel Module(.ko) , Windows Driver(.sys) and MacOS Kernel(.kext) via [Demigod](https://groundx.io/demigod/).
+Qiling Framework is corss platform and multi arch ultra lightweight emulator. Supported OS like Linux, MacOS, Windows, FreeBSD, DOS and UEFI. It also able to emulate x86 (16, 32 and 64bit), ARM, ARM64, MIPS, EVM and WASM.  
+
+<!-- more -->
+
+It also support Linux Kernel Module(.ko) , Windows Driver(.sys) and MacOS Kernel(.kext) via [Demigod](https://groundx.io/demigod/).
 
 Binary instrumentation and API are Qiling Framework main focus and priority. It is designed for reverse engineers - thus there is no need to rebuild another sand boxing tool. Using Qiling Framework saves you time. The API-rich Qiling Framework brings reverse and instrument binary to the next level quicker. 
 
@@ -25,8 +29,6 @@ Qiling also made its way to various international conferences:
 - [Defcon, USA](https://www.defcon.org/html/defcon-27/dc-27-demolabs.html#QiLing)
 - [Hitcon](https://hitcon.org/2019/CMT/agenda)
 - [Zeronights](https://zeronights.ru/report-en/qiling-io-advanced-binary-emulation-framework/)
-
-<!-- more -->
 
 <h1>Why Do We Need Qiling Framework</h1>
 The insecurity of smart Internet-connected or so-called “IoT” devices has become more concerning than ever. The existence of malware exploiting vulnerabilities, often poorly secured and configured Internet-facing devices has been known for many years. Hardware vendors and the entire security industry are struggling to fight the adversaries while trying to build better and safer products. Unfortunately, IoT threats and malware analysis remain the two biggest challenges in the security industry.
