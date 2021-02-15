@@ -77,110 +77,29 @@ Qiling Framework is able to run on top of Linux/FreeBSD/MacOS/Windows (WSL2) wit
 ---
 
 <h1>How Qiling Framework Works</h1>
-##### Demo Setup
+The below Youtube video shows how the above example works.
 
-  - *Hardware : X86 64bit*
-  - *OS : Ubuntu 18.04 64bit*
+#### Emulating ARM router firmware on Ubuntu X64 machine
 
-##### Demo #1 Solving simple CTF challenge with Qiling Framework and IDAPro
-Mini Qiling Framework tutorial : how to work with IDAPro
+- Qiling Framework hot-patch and emulates ARM router's /usr/bin/httpd on a X86_64Bit Ubuntu
 
-[![qiling DEMO 1: Catching wannacry's killer switch](https://raw.githubusercontent.com/qilingframework/qilingframework.github.io/master/images/demo1-en.jpg)](https://www.youtube.com/watch?v=SPjVAt2FkKA "Video DEMO 1")
+[![qiling Tutorial: Emulating and Fuzz ARM router firmware](https://github.com/qilingframework/theme.qiling.io/blob/master/source/img/fuzzer.jpg?raw=true)](https://www.youtube.com/watch?v=e3_T3KLh2NU " Demo #3 Emulating and Fuzz ARM router firmware")
 
----
-##### Demo #2 Fuzzing with Qiling Unicornalf
-More information on fuzzing with Qiling can be found [here](https://github.com/qilingframework/qiling/tree/dev/examples/fuzzing/README.md).
+#### Qiling's IDAPro Plugin: Instrument and Decrypt Mirai's Secret
 
-[![qiling DEMO 2: Fuzzing with Qiling Unicornalf](https://raw.githubusercontent.com/qilingframework/qilingframework.github.io/master/images/qilingfzz-s.png)](https://raw.githubusercontent.com/qilingframework/qilingframework.github.io/master/images/qilingfzz.png "Demo #2 Fuzzing with Qiling Unicornalf")
+- This video demonstrate how Qiling's IDAPro plugin able to make IDApro run with Qiling instrumentation engine
 
+[![](http://img.youtube.com/vi/ZWMWTq2WTXk/0.jpg)](http://www.youtube.com/watch?v=ZWMWTq2WTXk "Qiling's IDAPro Plugin: Instrument and Decrypt Mirai's Secret")
 
----
-##### Demo #3 Emulating ARM router firmware on Ubuntu X64 machine
-Qiling Framework hot-patch and emulates ARM router's /usr/bin/httpd on a X86_64Bit Ubuntu
+#### GDBserver with IDAPro demo
 
-[![qiling DEMO 3: Fully emulating httpd from ARM router firmware with Qiling on Ubuntu X64 machine](https://raw.githubusercontent.com/qilingframework/qilingframework.github.io/master/images/demo3-en.jpg)](https://www.youtube.com/watch?v=Nxu742-SNvw "Demo #3 Emulating ARM router firmware on Ubuntu X64 machine")
+- Solving a simple CTF challenge with Qiling Framework and IDAPro
 
-```python
-import os, socket, sys, threading
-sys.path.append("..")
-from qiling import *
-
-def patcher(ql):
-    br0_addr = ql.mem.search("br0".encode() + b'\x00')
-    for addr in br0_addr:
-        ql.mem.write(addr, b'lo\x00')
-
-def nvram_listener():
-    server_address = 'rootfs/var/cfm_socket'
-    data = ""
-    
-    try:  
-        os.unlink(server_address)  
-    except OSError:  
-        if os.path.exists(server_address):  
-            raise  
-
-    # Create UDS socket  
-    sock = socket.socket(socket.AF_UNIX,socket.SOCK_STREAM)  
-    sock.bind(server_address)  
-    sock.listen(1)  
-  
-    while True:  
-        connection, client_address = sock.accept()  
-        try:  
-            while True:  
-                data += str(connection.recv(1024))
-        
-                if "wan1.ip" in data:
-                    connection.send('1.1.1.1'.encode())
-                else: 
-                    break  
-                data = ""
-        finally:  
-                connection.close() 
-
-def my_sandbox(path, rootfs):
-    ql = Qiling(path, rootfs, output = "debug")
-    ql.add_fs_mapper("/dev/urandom","/dev/urandom")
-    ql.hook_address(patcher ,ql.loader.elf_entry)
-    ql.run()
+[![Solving a simple CTF challenge with Qiling Framework and IDAPro](https://i.ytimg.com/vi/SPjVAt2FkKA/0.jpg)](https://www.youtube.com/watch?v=SPjVAt2FkKA "Video DEMO 2")
 
 
-if __name__ == "__main__":
-    nvram_listener_therad =  threading.Thread(target=nvram_listener, daemon=True)
-    nvram_listener_therad.start()
-    my_sandbox(["rootfs/bin/httpd"], "rootfs")
-```
----
-##### Demo #4 Emulating UEFI
-Qiling Framework emulates UEFI
+#### Emulating MBR
 
-[![qiling DEMO 4: Emulating UEFI](https://raw.githubusercontent.com/qilingframework/qilingframework.github.io/master/images/demo4-s.png)](https://raw.githubusercontent.com/qilingframework/qilingframework.github.io/master/images/demo4-en.png "Demo #4 Emulating UEFI")
+- Qiling Framework emulates MBR
 
-```python
-import sys
-import pickle
-sys.path.append("..")
-from qiling import *
-from qiling.os.uefi.const import *
-
-def force_notify_RegisterProtocolNotify(ql, address, params):
-    event_id = params['Event']
-    if event_id in ql.loader.events:
-        ql.loader.events[event_id]['Guid'] = params["Protocol"]
-        # let's force notify
-        event = ql.loader.events[event_id]
-        event["Set"] = True
-        ql.loader.notify_list.append((event_id, event['NotifyFunction'], event['NotifyContext']))
-        ######
-        return EFI_SUCCESS
-    return EFI_INVALID_PARAMETER
-
-
-if __name__ == "__main__":
-    with open("rootfs/x8664_efi/rom2_nvar.pickel", 'rb') as f:
-        env = pickle.load(f)
-    ql = Qiling(["rootfs/x8664_efi/bin/TcgPlatformSetupPolicy"], "rootfs/x8664_efi", env=env)
-    ql.set_api("hook_RegisterProtocolNotify", force_notify_RegisterProtocolNotify)
-    ql.run()
-```
+[![qiling DEMO: Emulating MBR](https://github.com/qilingframework/theme.qiling.io/blob/master/source/img/mbr.png?raw=true)](https://github.com/qilingframework/theme.qiling.io/blob/master/source/img/mbr.png?raw=true "Demo #4 Emulating UEFI")
