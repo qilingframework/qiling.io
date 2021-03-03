@@ -10,7 +10,9 @@ Opensource project is never an easy task. Hence, we value any help from the comm
 <h1>Join our Cardano Stake Pool</h1>
 
 
-<h1>Early supporter listed below are not in any particular order</h1>
+<h1>Thank You</h1>
+Early supporter listed below are not in any particular order
+
 - Silas Cutler
 - Alloysius Goh
 - Brendan Scarvell
