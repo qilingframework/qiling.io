@@ -5,16 +5,16 @@ hide: true
 sticky: 100
 ---
 
-Opensource project is never an easy task. Hence, we value any help from the community. We would like to thank individual/organization that generously donated to Qiling Framework project. Listed below are not in any particular order:
+Opensource project is never an easy task. Hence, we value any help from the community. We would like to thank individual/organization that generously donated to Qiling Framework project.
 
+<h1>Join our Cardano Stake Pool</h1>
+
+
+<h1>Early supporter listed below are not in any particular order</h1>
 - Silas Cutler
 - Alloysius Goh
 - Brendan Scarvell
 - Shawn C
-
-<h1>Support us by joining our Cardano Stake Pool</h1>
-
-
 
 <h1>To support Qiling Framework</h1>
 To make things easier, we structure the "price" this way :-
