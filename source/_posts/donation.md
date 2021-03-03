@@ -12,6 +12,10 @@ Opensource project is never an easy task. Hence, we value any help from the comm
 - Brendan Scarvell
 - Shawn C
 
+<h1>Support us by joining our Cardano Stake Pool</h1>
+
+
+
 <h1>To support Qiling Framework</h1>
 To make things easier, we structure the "price" this way :-
 
