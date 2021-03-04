@@ -8,7 +8,7 @@ sticky: 100
 Opensource project is never an easy task. Hence, we value any help from the community. We would like to thank individual/organization that generously donated to Qiling Framework project.
 
 <h1>Cardano: Support Qiling with ADA staking</h1>
-Stake in our Cardano stake pool (arrpoximately 5% reward), steps as follow :-
+Stake in our Cardano stake pool (only 1% pool fees), steps as follow :-
 
 - Buy Cardano from any Exchanges
 - Withdraw to your own wallet [Daedalus || Yoroi]
