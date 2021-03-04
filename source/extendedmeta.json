@@ -1,7 +1,7 @@
 {
     "info": {
-        "url_png_icon_64x64": "https://qiling.io/ico.png",
-        "url_png_logo": "https://qiling.io/logo.png",
+        "url_png_icon_64x64": "https://qiling.io/img/ico.png",
+        "url_png_logo": "https://qiling.io/img/logo.png",
         "social": {
             "twitter_handle": "qiling_io",
             "telegram_handle": "qilingframework",
