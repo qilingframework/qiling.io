@@ -7,15 +7,15 @@ sticky: 100
 
 Opensource project is never an easy task. Hence, we value any help from the community. We would like to thank individual/organization that generously donated to Qiling Framework project.
 
-<h1>Earn passive incone while supporting us</h1>
-Stake in our Cardano stake pool (arrpoximately 5% annual reward), steps as follow
+<h1>Cardano: Earn passive income with staking</h1>
+Stake in our Cardano stake pool (arrpoximately 5% reward), steps as follow :-
 
 - Buy Cardano from any Exchanges
 - Withdraw to your own wallet [Daedalus || Yoroi]
 - Look for our stake pool
->- Ticket: LLSP
->- Pool Name: Labrador Lab Stake Pool
-- You still keep your coin, staking does not require you to trasnfer your coin 
+>- Ticket: QUF
+>- Pool Name: QilingUnicorn and Friends Stake Pool
+- You still keep your coin, staking does not require to trasnfer coin ownership
 
 <h1>SWAG</h1>
 To make things easier, we structure the "price" this way :-
