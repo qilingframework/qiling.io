@@ -13,9 +13,9 @@ Stake in our Cardano stake pool (arrpoximately 5% reward), steps as follow :-
 - Buy Cardano from any Exchanges
 - Withdraw to your own wallet [Daedalus || Yoroi]
 - Look for our stake pool
--> Ticket: QUF
--> Pool Name: QilingUnicorn and Friends Stake Pool
--> Pool ID: pool1ew3heaxhwgseza42s9pzwk97efqp9q6n6ra9j334uu5zggdzrsm
+>- Ticket: QUF
+>- Pool Name: QilingUnicorn and Friends Stake Pool
+>- Pool ID: pool1ew3heaxhwgseza42s9pzwk97efqp9q6n6ra9j334uu5zggdzrsm
 - You still keep your coin, staking does not require to trasnfer coin ownership
 - For more info, visit adapool [QUF](https://adapools.org/pool/cba37cf4d772219176aa81422758beca40128353d0fa594635e72824)
 
