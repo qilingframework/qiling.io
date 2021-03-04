@@ -9,6 +9,7 @@ Opensource project is never an easy task. Hence, we value any help from the comm
 
 <h1>Earn passive incone while supporting us</h1>
 Stake in our Cardano stake pool (arrpoximately 5% annual reward) and together we earn passive income, steps as follow
+
 - Buy Cardano from any Exchanges
 - Withdraw to your own wallet [Daedalus || Yoroi]
 - Look for our stake pool
