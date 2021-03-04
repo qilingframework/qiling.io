@@ -7,18 +7,16 @@ sticky: 100
 
 Opensource project is never an easy task. Hence, we value any help from the community. We would like to thank individual/organization that generously donated to Qiling Framework project.
 
-<h1>Join our Cardano Stake Pool</h1>
+<h1>Earn passive incone while supporting us</h1>
+Stake in our Cardano stake pool (arrpoximately 5% annual reward) and together we earn passive income, steps as follow
+- Buy Cardano from any Exchanges
+- Withdraw to your own wallet [Daedalus || Yoroi]
+- Look for our stake pool
+  >- Ticket: LLSP
+  >- Pool Name: Labrador Lab Stake Pool
+- Stake with us and  
 
-
-<h1>Thank You</h1>
-Early supporter listed below are not in any particular order
-
-- Silas Cutler
-- Alloysius Goh
-- Brendan Scarvell
-- Shawn C
-
-<h1>To support Qiling Framework</h1>
+<h1>SWAG</h1>
 To make things easier, we structure the "price" this way :-
 
   - < 150USD: Name on donation page
@@ -52,3 +50,11 @@ BTC
   - 1KCGw3sQxn5a73YZeKpYSj2sttuySbesng
  
 ```
+
+<h1>Thank You</h1>
+Early supporter listed below are not in any particular order
+
+- Silas Cutler
+- Alloysius Goh
+- Brendan Scarvell
+- Shawn C
