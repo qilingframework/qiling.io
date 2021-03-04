@@ -13,8 +13,8 @@ Stake in our Cardano stake pool (arrpoximately 5% annual reward) and together we
 - Buy Cardano from any Exchanges
 - Withdraw to your own wallet [Daedalus || Yoroi]
 - Look for our stake pool
-  >- Ticket: LLSP
-  >- Pool Name: Labrador Lab Stake Pool
+>- Ticket: LLSP
+>- Pool Name: Labrador Lab Stake Pool
 - Stake with us and  
 
 <h1>SWAG</h1>
