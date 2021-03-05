@@ -1,6 +1,6 @@
 ---
-title: Donation
-permalink: /donation/
+title: SWAG
+permalink: /swag/
 hide: true
 sticky: 100
 ---
