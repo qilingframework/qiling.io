@@ -1,6 +1,6 @@
 ---
 title: Cardano Stake Pool
-permalink: /stakepool/
+permalink: /stake/
 hide: true
 sticky: 100
 ---
