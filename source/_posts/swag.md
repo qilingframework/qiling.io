@@ -10,8 +10,8 @@ Opensource project is never an easy task. Hence, we value any help from the comm
 <h1>SWAG</h1>
 To make things easier, we structure the "price" this way :-
 
-  - < 150USD: Name on donation page
-  - => 150USD: Stickers + USB dirve + T-Shirt + Name on donation page
+  - < 200USD: Name on donation page
+  - => 200USD: Stickers + USB dirve + T-Shirt + Name on donation page
 
 Please note,
 
