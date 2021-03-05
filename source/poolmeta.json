@@ -2,7 +2,7 @@
   "name": "QilingUnicorn and Friends Stake Pool",
   "ticker": "QUF",
   "description": "Stake Pool to fund Qiling Framework, Unicorn Engine, Capstone Engine and Keystone Engine",
-  "homepage": "https://qiling.io/donation/",
+  "homepage": "https://qiling.io/stake",
   "nonce": "1614841297",
   "extended": "https://qiling.io/extendedmeta.json"
 }
