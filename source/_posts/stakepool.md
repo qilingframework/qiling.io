@@ -14,7 +14,7 @@ Stake in our Cardano stake pool, steps as follow :-
 >- Ticker: QUF
 >- Pool Name: QilingUnicorn and Friends Stake Pool
 >- Pool ID: pool1ew3heaxhwgseza42s9pzwk97efqp9q6n6ra9j334uu5zggdzrsm
-- You still keep your coin, staking does not require to trasnfer coin ownership
+- You still keep your coin, staking does not require to transfer coin ownership
 
 Additional notes: 
 - Pool fees: 1%
