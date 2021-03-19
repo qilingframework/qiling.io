@@ -15,6 +15,9 @@ Additionally, Qiling provides API access to register, memory, filesystem, operat
 
 Qiling also made its way to various international conferences:
 
+2021:
+- [Black Hat, Asia](https://www.blackhat.com/asia-21/arsenal/schedule/index.html#qiling-smart-analysis-for-smart-contract-22643)
+
 2020:
 
 - [Black Hat, Europe](https://www.blackhat.com/eu-20/arsenal/schedule/index.html#qiling-framework-deep-dive-into-obfuscated-binary-analysis-21781)
