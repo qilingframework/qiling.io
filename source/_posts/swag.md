@@ -28,13 +28,15 @@ Please note,
 - Crypto Currencies:
 
 ```  
-
+ADA
+  - addr1qx5th47wetv66nvreujlrffmf8w2p75zn95z2la9xjlxm775kxywp7cvm5mghgs7w5dpjj7c5kxy6r6tuzk26r422x9s6caers
+```
+```
 XMR
   - 46T1c5taWuP6G4XvAG5shC6a7eai4Qe4HPFj5qEGyJzzMVRa9M9MR4DbNbbSDKtbgNR6bvWyj32Wb3HySYZuDqUp2GCr52o
 DASH
   - XhTsLXTQEhN5F7hKtq8HV867um3HZuXvF9
-ADA
-  - addr1qx5th47wetv66nvreujlrffmf8w2p75zn95z2la9xjlxm775kxywp7cvm5mghgs7w5dpjj7c5kxy6r6tuzk26r422x9s6caers
+
 ETH
   - 0x8c1E0dC923B5F33161e8A034DE2551f5CD2e9F79
 BTC
