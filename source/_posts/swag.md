@@ -22,7 +22,6 @@ Please note,
 - Paypal is accepted at our [web store](https://www.hardwareninja.store/c/QilingFramework)
 
 <img src="https://github.com/qilingframework/theme.qiling.io/blob/master/source/img/swag.jpg?raw=true"><br />
-<img src="https://github.com/qilingframework/theme.qiling.io/blob/master/source/img/donation-girl.jpg?raw=true">
 
 - Paypal: [https://www.hardwareninja.store/c/QilingFramework](https://www.hardwareninja.store/c/QilingFramework)
 - Crypto Currencies:
