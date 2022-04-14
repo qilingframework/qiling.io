@@ -44,6 +44,7 @@ jhumble
 Mark Jansen (learn-more)
 cq674350529
 bkerler (viperbjk)
+```
 
 Contributors (in no particular order)
 ```
