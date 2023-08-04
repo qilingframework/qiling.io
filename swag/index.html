@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://github.com/qilingframework/qiling/blob/master/docs/qiling_small.png?raw=true">
+  <link rel="icon" type="image/png" href="https://github.com/qilingframework/qiling/blob/master/docs/qiling_small.png?raw=true">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="xwings">
+  <meta name="keywords" content="RE, Framework, Binary Analysis, MCU, EVM">
+  <title>SWAG - Qiling Framework</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"qiling.io","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":false,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+  <header style="height: 40vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Qiling Framework</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://www.xandora.io/opensource">
+                
+                Support
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://github.com/qilingframework/qiling">
+                <i class="iconfont icon-github-fill"></i>
+                Opensource
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://github.com/qilingframework/qiling/issues/134">
+                
+                Showcase
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/comparison/">
+                
+                Comparison
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://docs.qiling.io/en/latest/install">
+                
+                Installation
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://docs.qiling.io">
+                
+                Documentation
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                
+                Links
+              </a>
+            </li>
+          
+        
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://github.com/qilingframework/qiling/blob/dev/docs/bg_page.png?raw=true') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.8)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="SWAG">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2023-08-04 07:57" pubdate>
+        August 4, 2023 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">SWAG</h1>
+            
+            <div class="markdown-body">
+              <p>Opensource project is never an easy task. Hence, we value any help from the community. We would like to thank individual/organization that generously donated to Qiling Framework project.</p>
+<h1>SWAG</h1>
+To make things easier, we structure the "price" this way :-
+
+<ul>
+<li>&lt; 200USD: Name on donation page</li>
+<li>=&gt; 200USD: Stickers + USB dirve + T-Shirt + Name on donation page</li>
+</ul>
+<p>Please note,</p>
+<ul>
+<li>Name on donation page is default, please let me know if you don’t agree</li>
+<li>“USD” denotes the US dolar equivalent amount of coin value during the time of donation  </li>
+<li>Please notify us via email to <a href="mailto:kj@qiling.io">kj@qiling.io</a> after making the donation.</li>
+<li>These are not ready made. So, you might need to wait a while for the swags to be delivered.</li>
+<li>Paypal is accepted at our <a target="_blank" rel="noopener" href="https://www.hardwareninja.store/c/QilingFramework">web store</a></li>
+</ul>
+<p><img src="https://github.com/qilingframework/theme.qiling.io/blob/master/source/img/swag.jpg?raw=true" srcset="/img/loading.gif"><br /></p>
+<ul>
+<li>Paypal: <a target="_blank" rel="noopener" href="https://www.hardwareninja.store/c/QilingFramework">https://www.hardwareninja.store/c/QilingFramework</a></li>
+<li>Crypto Currencies:</li>
+</ul>
+<figure class="highlight gcode"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs gcode">ADA<br>  - addr<span class="hljs-number">1</span>qx<span class="hljs-number">5</span>th<span class="hljs-number">47</span>wetv<span class="hljs-number">66</span><span class="hljs-symbol">nvreujlrffmf8</span>w<span class="hljs-number">2</span>p<span class="hljs-number">75</span>z<span class="hljs-symbol">n95</span>z<span class="hljs-number">2</span>la<span class="hljs-number">9</span>xjlx<span class="hljs-name">m775</span>kxywp<span class="hljs-number">7</span>cv<span class="hljs-name">m5</span>mghgs<span class="hljs-number">7</span>w<span class="hljs-number">5</span>dpjj<span class="hljs-number">7</span>c<span class="hljs-number">5</span>kxy<span class="hljs-number">6</span>r<span class="hljs-number">6</span>tuzk<span class="hljs-number">26</span>r<span class="hljs-number">422</span>x<span class="hljs-number">9</span>s<span class="hljs-number">6</span>caers<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight gcode"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs gcode">XMR<br>  - <span class="hljs-number">46</span>T<span class="hljs-number">1</span>c<span class="hljs-number">5</span>taWuP<span class="hljs-number">6</span><span class="hljs-name">G4</span>XvA<span class="hljs-name">G5</span>shC<span class="hljs-number">6</span>a<span class="hljs-number">7</span>eai<span class="hljs-number">4</span>Qe<span class="hljs-number">4</span>HPFj<span class="hljs-number">5</span>qEGyJzzMVRa<span class="hljs-number">9</span><span class="hljs-name">M9</span>MR<span class="hljs-number">4</span>Db<span class="hljs-symbol">NbbSDKtbgNR6</span>bvWyj<span class="hljs-number">32</span>Wb<span class="hljs-number">3</span>HySYZuDqUp<span class="hljs-number">2</span>GCr<span class="hljs-number">52</span>o<br>DASH<br>  - XhTsLXTQEh<span class="hljs-symbol">N5</span>F<span class="hljs-number">7</span>hKtq<span class="hljs-number">8</span>HV<span class="hljs-number">867</span>u<span class="hljs-name">m3</span>HZuXvF<span class="hljs-number">9</span><br>ETH<br>  - <span class="hljs-number">0</span>x<span class="hljs-number">8</span>c<span class="hljs-number">1</span>E<span class="hljs-number">0</span>dC<span class="hljs-number">923</span>B<span class="hljs-number">5</span>F<span class="hljs-number">33161</span>e<span class="hljs-number">8</span>A<span class="hljs-number">034</span>DE<span class="hljs-number">2551</span>f<span class="hljs-number">5</span>CD<span class="hljs-number">2</span>e<span class="hljs-number">9</span>F<span class="hljs-number">79</span><br>BTC<br>  - <span class="hljs-number">1</span>KCGw<span class="hljs-number">3</span>sQx<span class="hljs-symbol">n5</span>a<span class="hljs-number">73</span>YZeKpYSj<span class="hljs-number">2</span>sttuySbes<span class="hljs-symbol">ng</span><br></code></pre></div></td></tr></table></figure>
+<h1>Thank You</h1>
+Early supporter listed below are not in any particular order
+
+<ul>
+<li>Silas Cutler</li>
+<li>Alloysius Goh</li>
+<li>Brendan Scarvell</li>
+<li>Shawn C</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://qiling.io" target="_blank" rel="nofollow noopener"><span>Qiling Framework</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

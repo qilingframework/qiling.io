@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://github.com/qilingframework/qiling/blob/master/docs/qiling_small.png?raw=true">
+  <link rel="icon" type="image/png" href="https://github.com/qilingframework/qiling/blob/master/docs/qiling_small.png?raw=true">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="xwings">
+  <meta name="keywords" content="RE, Framework, Binary Analysis, MCU, EVM">
+  <title>Introduction - Qiling Framework</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"qiling.io","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":false,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+  <header style="height: 40vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Qiling Framework</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://www.xandora.io/opensource">
+                
+                Support
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://github.com/qilingframework/qiling">
+                <i class="iconfont icon-github-fill"></i>
+                Opensource
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://github.com/qilingframework/qiling/issues/134">
+                
+                Showcase
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/comparison/">
+                
+                Comparison
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://docs.qiling.io/en/latest/install">
+                
+                Installation
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://docs.qiling.io">
+                
+                Documentation
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                
+                Links
+              </a>
+            </li>
+          
+        
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://github.com/qilingframework/qiling/blob/dev/docs/bg_page.png?raw=true') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.8)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Introduction">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2023-08-04 07:57" pubdate>
+        August 4, 2023 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Introduction</h1>
+            
+            <div class="markdown-body">
+              <p>Cross platform and multi arch ultra lightweight emulator. Supported OS: Linux, MacOS, Windows, FreeBSD, DOS and UEFI. Support Arch: x86(16/32/64), ARM(64) MIPS, EVM and WASM.</p>
+<a id="more"></a>
+
+<p>It also support Linux Kernel Module(.ko) , Windows Driver(.sys) and MacOS Kernel(.kext) via <a target="_blank" rel="noopener" href="https://groundx.io/demigod/">Demigod</a>.</p>
+<p>Binary instrumentation and API are Qiling Framework main focus and priority. It is designed for reverse engineers - thus there is no need to rebuild another sand boxing tool. Using Qiling Framework saves you time. The API-rich Qiling Framework brings reverse and instrument binary to the next level quicker. </p>
+<p>Additionally, Qiling provides API access to register, memory, filesystem, operating system and debuger. Qiling also provides virtual machine level API such as save and restore execution state.</p>
+<p>Qiling also made its way to various international conferences:</p>
+<p>2021:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.blackhat.com/us-21/arsenal/schedule/index.html#bringing-the-x-complete-re-experience-to-smart-contract-24119">Black Hat, USA</a></li>
+<li><a target="_blank" rel="noopener" href="https://conference.hitb.org/hitbsecconf2021ams/sessions/when-qiling-framework-meets-symbolic-execution/">Hack In The Box, Amsterdam</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.blackhat.com/asia-21/arsenal/schedule/index.html#qiling-smart-analysis-for-smart-contract-22643">Black Hat, Asia</a></li>
+</ul>
+<p>2020:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.blackhat.com/eu-20/arsenal/schedule/index.html#qiling-framework-deep-dive-into-obfuscated-binary-analysis-21781">Black Hat, Europe</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.blackhat.com/us-20/arsenal/schedule/index.html#qiling-framework-from-dark-to-dawn-----enlightening-the-analysis-of-the-most-mysterious-iot-firmware--21062">Black Hat, USA</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.blackhat.com/us-20/briefings/schedule/#demigod-the-art-of-emulating-kernel-rootkits-20009">Black Hat, USA (Demigod)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.blackhat.com/asia-20/arsenal/schedule/index.html#qiling-lightweight-advanced-binary-analyzer-19245">Black Hat, Asia</a></li>
+<li><a target="_blank" rel="noopener" href="https://conference.hitb.org/lockdown-livestream/">Hack In The Box, Lockdown 001</a></li>
+<li><a target="_blank" rel="noopener" href="https://conference.hitb.org/hitb-lockdown002/virtual-labs/virtual-lab-qiling-framework-learn-how-to-build-a-fuzzer-based-on-a-1day-bug/">Hack In The Box, Lockdown 002</a></li>
+<li><a target="_blank" rel="noopener" href="https://cyberweek.ae/2020/lab-qiling-framework/">Hack In The Box, Cyberweek</a></li>
+<li><a target="_blank" rel="noopener" href="https://nullcon.net/website/goa-2020/speakers/kaijern-lau.php">Nullcon</a></li>
+</ul>
+<p>2019:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.defcon.org/html/defcon-27/dc-27-demolabs.html#QiLing">Defcon, USA</a></li>
+<li><a target="_blank" rel="noopener" href="https://hitcon.org/2019/CMT/agenda">Hitcon</a></li>
+<li><a target="_blank" rel="noopener" href="https://zeronights.ru/report-en/qiling-io-advanced-binary-emulation-framework/">Zeronights</a></li>
+</ul>
+<h1>Why Do We Need Qiling Framework</h1>
+The insecurity of smart Internet-connected or so-called “IoT” devices has become more concerning than ever. The existence of malware exploiting vulnerabilities, often poorly secured and configured Internet-facing devices has been known for many years. Hardware vendors and the entire security industry are struggling to fight the adversaries while trying to build better and safer products. Unfortunately, IoT threats and malware analysis remain the two biggest challenges in the security industry.
+
+<p>Modern IoT threats and malware are moving towards various platforms and CPU architecture. Reverse engineers are struggling to cope and understand different operating systems and CPU architecture. Besides, lack of updated tools makes the situation worse. Current available tools are nowhere near to catch up with the speed of fast-growing security threat.</p>
+<p>Common techniques used to perform analysis such as full system emulation, user-mode emulation, binary instrumentation, disassembler and sandboxing are just barely sufficient. These tools are either serving single type operating system or works on one CPU architecture. Also, these tools need to be used separately, streamlining information or cross referencing data is almost impossible. These are the reasons why reverse engineering is never an easy task.</p>
+<hr>
+<h3 id="Who-Uses-Qiling-Framework"><a href="#Who-Uses-Qiling-Framework" class="headerlink" title="Who Uses Qiling Framework"></a>Who Uses Qiling Framework</h3><h4 id="Security-Researchers"><a href="#Security-Researchers" class="headerlink" title="Security Researchers"></a>Security Researchers</h4><ul>
+<li>Using Qiling For IoT, malware, UEFI and MBR research</li>
+<li>Building new tools on top of Qiling Framework such as malware sandbox or fuzzer<h4 id="University-Student"><a href="#University-Student" class="headerlink" title="University Student"></a>University Student</h4></li>
+<li>University students (including master and PhD), writing their thesis based on adding new features or building new tools on top of Qiling Framework<h4 id="University-Lecturer"><a href="#University-Lecturer" class="headerlink" title="University Lecturer"></a>University Lecturer</h4></li>
+<li>Teaching students how to build Operating System</li>
+<li>Easiest way to explain how syscall, CPU or filesystem works</li>
+</ul>
+<hr>
+<h3 id="What-is-Qiling-Framework"><a href="#What-is-Qiling-Framework" class="headerlink" title="What is Qiling Framework"></a>What is Qiling Framework</h3><p>Qiling Framework is not just an emulation platform or a reverse engineering tool. It combines binary instrumentation and binary emulation into one single framework, solving the problem that applications do not run in a vacuum and are highly dependent on the OS. With vast OS support, Qiling Framework opens up endless possibilities and potential for binary analysis. With Qiling Framework, it is able to:</p>
+<ul>
+<li>Cross platform: Windows, MacOS, Linux, BSD, UEFI, DOS</li>
+<li>Cross architecture: X86, X86_64, ARM, ARM64, MIPS, 8086</li>
+<li>Multiple file formats: PE, MachO, ELF, COM</li>
+<li>Emulate &amp; sandbox machine code in an isolated environment</li>
+<li>Support cross architecture and platform debugging capabilities</li>
+<li>Provide high level API to setup &amp; configure the sandbox</li>
+<li>Fine-grain instrumentation: allow hooks at various levels (instruction/basic-block/memory-access/exception/syscall/IO/etc)</li>
+<li>Allow dynamic hotpatch on-the-fly running code, including the loaded library</li>
+<li>True framework in Python, making it easy to build customized security analysis tools on top</li>
+</ul>
+<p>Qiling Framework is able to emulate: </p>
+<ul>
+<li>Windows X86 32/64bit</li>
+<li>Linux X86 32/64bit, ARM, AARCH64, MIPS</li>
+<li>MacOS X86 32/64bit</li>
+<li>FreeBSD X86 32/64bit</li>
+<li>UEFI</li>
+<li>DOS</li>
+<li>MBR</li>
+</ul>
+<p>Qiling Framework is able to run on top of Linux/FreeBSD/MacOS/Windows (WSL2) without CPU architecture limitation</p>
+<hr>
+<h3 id="How-Qiling-Framework-Works"><a href="#How-Qiling-Framework-Works" class="headerlink" title="How Qiling Framework Works"></a>How Qiling Framework Works</h3><p>The below Youtube video shows how the above example works.</p>
+<h4 id="Emulating-ARM-router-firmware-on-Ubuntu-X64-machine"><a href="#Emulating-ARM-router-firmware-on-Ubuntu-X64-machine" class="headerlink" title="Emulating ARM router firmware on Ubuntu X64 machine"></a>Emulating ARM router firmware on Ubuntu X64 machine</h4><ul>
+<li>Qiling Framework hot-patch and emulates ARM router’s /usr/bin/httpd on a X86_64Bit Ubuntu</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=e3_T3KLh2NU" title=" Demo #3 Emulating and Fuzz ARM router firmware"><img src="https://github.com/qilingframework/theme.qiling.io/blob/master/source/img/fuzzer.jpg?raw=true" srcset="/img/loading.gif" alt="qiling Tutorial: Emulating and Fuzz ARM router firmware"></a></p>
+<h4 id="Qiling’s-IDAPro-Plugin-Instrument-and-Decrypt-Mirai’s-Secret"><a href="#Qiling’s-IDAPro-Plugin-Instrument-and-Decrypt-Mirai’s-Secret" class="headerlink" title="Qiling’s IDAPro Plugin: Instrument and Decrypt Mirai’s Secret"></a>Qiling’s IDAPro Plugin: Instrument and Decrypt Mirai’s Secret</h4><ul>
+<li>This video demonstrate how Qiling’s IDAPro plugin able to make IDApro run with Qiling instrumentation engine</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=4aEgXpPh9ks" title="Qiling&#39;s IDAPro Plugin: Instrument and Decrypt Mirai&#39;s Secret"><img src="http://img.youtube.com/vi/4aEgXpPh9ks/0.jpg" srcset="/img/loading.gif"></a></p>
+<h4 id="GDBserver-with-IDAPro-demo"><a href="#GDBserver-with-IDAPro-demo" class="headerlink" title="GDBserver with IDAPro demo"></a>GDBserver with IDAPro demo</h4><ul>
+<li>Solving a simple CTF challenge with Qiling Framework and IDAPro</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=-Ipk0P3ppzo" title="Video DEMO 2"><img src="https://i.ytimg.com/vi/-Ipk0P3ppzo/0.jpg" srcset="/img/loading.gif" alt="Solving a simple CTF challenge with Qiling Framework and IDAPro"></a></p>
+<h4 id="Emulating-MBR"><a href="#Emulating-MBR" class="headerlink" title="Emulating MBR"></a>Emulating MBR</h4><ul>
+<li>Qiling Framework emulates MBR</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/qilingframework/theme.qiling.io/blob/master/source/img/mbr.png?raw=true" title="Demo #4 Emulating UEFI"><img src="https://github.com/qilingframework/theme.qiling.io/blob/master/source/img/mbr.png?raw=true" srcset="/img/loading.gif" alt="qiling DEMO: Emulating MBR"></a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://qiling.io" target="_blank" rel="nofollow noopener"><span>Qiling Framework</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
