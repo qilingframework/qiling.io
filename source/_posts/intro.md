@@ -101,7 +101,7 @@ The below Youtube video shows how the above example works.
 
 - Solving a simple CTF challenge with Qiling Framework and IDAPro
 
-[![Solving a simple CTF challenge with Qiling Framework and IDAPro](https://i.ytimg.com/vi/SPjVAt2FkKA/0.jpg)](https://www.youtube.com/watch?v=SPjVAt2FkKA "Video DEMO 2")
+[![Solving a simple CTF challenge with Qiling Framework and IDAPro](https://i.ytimg.com/vi/-Ipk0P3ppzo/0.jpg)](https://www.youtube.com/watch?v=-Ipk0P3ppzo "Video DEMO 2")
 
 
 #### Emulating MBR
